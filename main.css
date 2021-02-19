@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Raleway', sans-serif;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    height: 100vh;
+    display: grid;
+    grid-template: 40% 60% / 25% 1fr;
+    grid-template-areas:
+    "aside main"
+    "aside main";
+}
+.burger-menu {
+    width: 100%;
+    grid-area: aside;
+    padding: 20px 10px;
+    background-color: #151B31;
+    font-size: calc(.2em + .8vw);
+    color: white;
+}
+.burger-menu a {
+    color: white;
+}
+.burger-menu a:hover {
+    color: rgb(236, 135, 135);
+}
+.burger-menu__friends-playlists img {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+}
+.platzi-video-logo {
+    width: 70%;
+    height: initial;
+}
+.burger-menu__playlist {
+    width: 100%;
+    height: 55%;
+    display: grid;
+    grid-template: repeat(11, 1fr) / 20px 1fr;
+    grid-template-areas: "title title";
+    padding-left: 3%;
+    grid-auto-flow: column;
+}
+.burger-menu__playlist li:nth-child(1) {
+    grid-area: title;
+}
+.burger-menu__friends-playlists {
+    padding-left: 3%;
+    width: 90%;
+    height: 35%;
+    display: grid;
+    grid-template: 15% repeat(4, 1fr) / 14% 1fr;
+    grid-template-areas: "title title";
+    grid-auto-flow: column;
+}
+.burger-menu__friends-playlists li:nth-child(1) {
+    grid-area: title;
+}
+.burger-menu__friends-playlists li:nth-child(n+4) {
+    align-self: center;
+}
+.burger-menu__friends-playlists li:nth-child(-n+4) {
+    align-self: center;
+}
+
+
+main {
+    width: 100%;
+    grid-area: main;
+    color: #7B7E87;
+}
+main h2 {
+    font-size: calc(.5em + .5vw);
+}
+.main-video {
+    width: inherit;
+    height: 40%;
+}
+.video-description__title {
+    font-size: calc(.8em + .5vw);
+}
+.video-description-tools {
+    width: inherit;
+    height: 14%;
+    padding: 10px;
+    padding-bottom: 5px;
+    box-shadow: 1px 6px 12px -10px rgba(0,0,0,0.54);
+}
+.video-description {
+    width: inherit;
+    height: 50%;    
+}
+.video-tools {
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.video-tools img {
+    width: 16px;
+}
+.video-tools button {
+    border-radius: 10px;
+    border: none;
+    color: white;
+    height: 100%;
+    background-color: transparent;
+}
+.video-tools--actions {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    gap: 20px;
+}
+.video-tools--actions .playlistadd-button{
+    background: rgb(255,17,20);
+    background: linear-gradient(90deg, rgba(255,17,20,1) 0%, rgba(252,98,150,1) 100%);
+    font-size: calc(.3em + .6vw);
+    height: 3.3vh;
+    width: 40%;
+}
+.share-button, .download-button {
+    width: 30%;
+}
+.share-button a, .download-button a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(.2em + .5vw);
+}
+.video-tools--genres {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 13px;
+}
+.video-tools--genres button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: unset;
+    width: 24%;
+    padding: 3px 0;
+}
+.video-tools--genres a {
+    color: white;
+    font-size: calc(.4em + .5vw);
+    line-height: 100%;
+}
+.video-tools--genres .electronic-genre {
+    background-color: #FC6296;
+}
+.video-tools--genres .rock-genre {
+    background-color: #15EBC1;
+}
+.video-tools--genres .eightys-genre {
+    background-color: #15EBC1;
+}
+.video-tools--genres .rela-genre {
+    background-color: #EF2F83;
+}
+.comments-suggests {
+    display: flex;
+    padding: 15px;
+    padding-bottom: 0;
+    height: 45%;
+}
+.comments-container {
+    width: 70%;
+    height: 100%;
+}
+.comments {
+    display: grid;
+    height: 97%;
+    width: 90%;
+    grid-template: 8% 6vh repeat(5, 1fr) / 2.5vw 1fr;
+    grid-template-areas: "title title" "input input";
+    grid-auto-flow: column;
+    align-items: center;
+    font-size: calc(.3em + .6vw);
+}
+.comments p:nth-child(1) {
+    color: black;
+    font-weight: bold;
+}
+.comments h2 {
+    grid-area: title;
+}
+
+.comments li:nth-child(-n+7) {
+    justify-self: center;
+}
+.comments li:nth-child(-n+2) {
+    justify-self: unset;
+}
+.comments__input {
+    height: 90%;
+    grid-area: input;
+    display: grid;
+    grid-template-columns: 2.5vw 1fr;
+    align-items: center;
+    background-color: rgb(243, 233, 233);
+    border-radius: 5px;
+}
+.comments__input a {
+    align-self: center;
+    justify-self: center;
+    height: inherit;
+}
+.comments__input input {
+    border: none;
+    height: inherit;
+    background-color: rgb(243, 233, 233);
+    font-size: calc(.4em + .6vw);
+}
+.comments img {
+    width: 1.7vw;
+    height: 2vw;
+    border-radius: 50%;
+    object-fit: fill;
+}
+.suggests {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3%;
+}
+.suggests img {
+    width: 60%;
+    max-height: 60%;
+    object-fit: contain; 
+}
+.suggests figcaption {
+    width: 60%;
+    font-size: calc(.4em + .5vw);
+}
+@media (max-width: 1000px) {
+    body {
+        grid-template-columns: 1fr; 
+    }
+    .burger-menu {
+        position: absolute;
+        left: -1000px;
+    }
+
+    main h2 {
+        font-size: calc(.8em + .7vw);
+    }
+
+    .video-tools {
+        width: unset;
+    }
+
+    .comments {
+        grid-template-columns: 5.5vw 1fr;
+        font-size: calc(.6em + .7vw);
+    }
+    .comments img {
+        width: 25px;
+        height: 25px;
+    }
+    .comments__input {
+        grid-template-columns: 5.5vw 1fr;
+    }
+}
+@media (max-width: 560px) {
+    .comments-suggests {
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+    }
+    .comments-container {
+        width: auto;
+        height: 43vh;
+        margin: 0 auto;
+    }
+    .comments {
+        width: auto;
+        padding: 0;
+        grid-template-columns: 15% 1fr;
+    }
+    .comments__input {
+        grid-template-columns: 15% 1fr;
+
+    }
+    .video-tools--actions {
+        width: 45%;
+        gap: 0px;
+    }
+    .video-tools--actions img{
+        width: 25%;
+    }
+    .video-tools--actions .playlistadd-button {
+        width: 40%;
+    }
+
+    .suggests {
+        align-self: center;
+    }
+    .suggests img {
+        width: 80%;
+        shape-rendering: rectangle(0,0,100%,100%,50px,50px)
+    }
+    
+}
