@@ -5,4 +5,4 @@ Grid course project, the layout of a hypothetical video platform for Platzi.
 The best way to watch platzi videos only on [PlatziVideo](https://luiscadillo.github.io/Platzi-video/ "website")
 ## 👀Preview
 ![Screenshot](Platzi-video.png)
-![Screenshot](Platzi-video--mobile.png)
+![Screenshot](Platzi-video--mobile.jpg)
